@@ -52,4 +52,16 @@ tidy_noaa %>%
          yaxis = list(title = "Maximum temperature (ºC)")) #plot scatterplot showing tmax vs. tmin
 ```
 
+### Plotly violinplot
+
+```{r}
+tidy_noaa %>%
+  filter(snow > 0 & snow < 100) %>%
+  plot_ly(x = ~ year, y = ~ snow, split = ~ year, type = "violin",
+          box = list(visible = T),
+          meanline = list(visible = T)) %>%
+  layout(xaxis = list(title = "Year"),
+         yaxis = list(title = "Snowfall (mm)")) #plot violin showing distribution
+    
+```
 
