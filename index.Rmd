@@ -1,7 +1,14 @@
 ---
-title: "Holy cow!"
+title: "Bingyu Sun"
+output:
+  html_document: 
+    toc: true
+    toc_float: true
 ---
 
-### I have a webpage!
+First Year Master Student, 
+Biostatisitcs Department in Mailman School of Public Health, Columbia University
 
-And I can put all kinds of stuff on it!
+### About this website
+
+The website contains my academic experience and some plotly plots
