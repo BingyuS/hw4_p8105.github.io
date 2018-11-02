@@ -6,15 +6,14 @@ title: "Code"
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
-
-library(plotly)
+library(plotly) #load libraries
 ```
 
 
-```{r}
-set.seed(1)
+```{r, tidy_data}
+set.seed(1) #set fixed random samples
 
-data(ny_noaa)
+data(ny_noaa) #get data
 
 tidy_noaa = 
   ny_noaa %>%
@@ -22,12 +21,12 @@ tidy_noaa =
   mutate(prcp = prcp/10, 
          tmax = as.numeric(tmax)/10,
          tmin = as.numeric(tmin)/10) %>% #convert values of prcp to mm and temp to ºC
-  sample_n(5000) #focus on randomly selected 1000 samples
+  sample_n(5000) #focus on randomly selected 5000 samples
 ```
 
 ### Plotly boxplot
 
-```{r}
+```{r, plot_1}
 tidy_noaa %>%
   select(-(day:snwd), -tmin) %>%
   filter(month %in% c("01", "07") & !is.na(tmax)) %>% #get Jan and July data, and remove any missing value for tmax
@@ -41,9 +40,9 @@ tidy_noaa %>%
 
 ### Plotly scatterplot
 
-```{r}
+```{r, plot_2}
 tidy_noaa %>%
-  filter(!is.na(tmax) & !is.na(tmin)) %>%
+  filter(!is.na(tmax) & !is.na(tmin)) %>% #filter out missing values
   plot_ly(x = ~ tmin, y = ~ tmax, type = "scatter", mode = "markers",
           alpha = 0.5,
           color = ~ month, colors = "Set3") %>%
@@ -53,9 +52,9 @@ tidy_noaa %>%
 
 ### Plotly violinplot
 
-```{r}
+```{r, plot_3}
 tidy_noaa %>%
-  filter(snow > 0 & snow < 100) %>%
+  filter(snow > 0 & snow < 100) %>% #get snow btw 0mm to 100mm
   plot_ly(x = ~ year, y = ~ snow, split = ~ year, type = "violin",
           box = list(visible = T),
           meanline = list(visible = T)) %>%

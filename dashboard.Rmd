@@ -11,14 +11,14 @@ library(flexdashboard)
 library(tidyverse)
 library(viridis)
 library(p8105.datasets)
-library(plotly)
+library(plotly) #load libraries
 ```
 
 
-```{r}
-set.seed(1)
+```{r, tidy_data}
+set.seed(1) #select same random samples each time
 
-data(ny_noaa)
+data(ny_noaa) #get data
 
 tidy_noaa = 
   ny_noaa %>%
@@ -34,9 +34,9 @@ tidy_noaa =
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart A
+### Average Max Temperature In Each Station from 1981 to 2010 (January VS. July)
 
-```{r}
+```{r, plot_1}
 tidy_noaa %>%
   select(-(day:snwd), -tmin) %>%
   filter(month %in% c("01", "07") & !is.na(tmax)) %>% #get Jan and July data, and remove any missing value for tmax
@@ -44,16 +44,15 @@ tidy_noaa %>%
   summarize(mean_tmax = mean(tmax)) %>%
   plot_ly(x = ~ month, y = ~mean_tmax, color = ~ year, type = "box") %>%
   layout(boxmode = "group",
-         title = "Average Max Temperature In Each Station from 1981 to 2010 (January VS. July)",
-         yaxis = list(title = "Mean Max Temperature (ºC)")) #create two-panel plots by month
+         yaxis = list(title = "Mean Max Temperature (ºC)")) #create boxplot by month
 ```
 
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart B
+### tmax vs. tmin
 
-```{r}
+```{r, plot_2}
 tidy_noaa %>%
   filter(!is.na(tmax) & !is.na(tmin)) %>%
   plot_ly(x = ~ tmin, y = ~ tmax, type = "scatter", mode = "markers",
@@ -63,9 +62,9 @@ tidy_noaa %>%
          yaxis = list(title = "Maximum temperature (ºC)")) #plot scatterplot showing tmax vs. tmin
 ```
 
-### Chart C
+### The Distribution of Snowfall Values from 0mm and 100mm by Year
 
-```{r}
+```{r, plot_3}
 tidy_noaa %>%
   filter(snow > 0 & snow < 100) %>%
   plot_ly(x = ~ year, y = ~ snow, split = ~ year, type = "violin",
