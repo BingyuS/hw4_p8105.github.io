@@ -11,4 +11,8 @@ Biostatisitcs Department in Mailman School of Public Health, Columbia University
 
 ### About this website
 
-The website contains my academic experience and some plotly plots
+The website contains my academic experience and three plotly plots shown on flexdashboard.
+
+### About myself
+
+I am a first year master student in [biostatistics](https://www.mailman.columbia.edu/become-student/departments/biostatistics) at Columbia University. The website is a project for data science class I take.
