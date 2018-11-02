@@ -3,6 +3,16 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
+    - text: "CV"
+      href: cv.html
+    - text: Data Manipulation
+      menu:
+      - text: Code
+        href: code.html
+      - text: Plotly
+        href: plotly.html
+      - text: Dashboard
+        href: dashboard.html
     - text: "About"
       href: about.html
     - icon: fa-envelope fa-lg
@@ -10,4 +20,5 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/BingyuS/
 output:
-  html_document
+  html_document:
+    theme: flatly

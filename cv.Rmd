@@ -1,0 +1,77 @@
+---
+title: "Curriculum Vitae"
+output:
+  html_document: 
+    toc: true
+    toc_float: true
+---
+
+## Bingyu Sun
+
+Tel: (01) 929-284-6710
+
+Email: bs3142@cumc.columbia.edu
+
+### EDUCATION
+
+**Columbia University** [New York, New York]{style="float:right"}
+
+_Master, Biostatistics_ [September 2018 - Present]{style="float:right"}
+
+**McGill University** [Montreal, Quebec]{style="float:right"}
+
+_undergraduate, Honor Biology, Neuroscience **GPA: 3.72**_ [September 2013 - May 2017]{style="float:right"}
+
+### LANGUAGES
+
+English and Mandarin
+
+### TECHNICAL SKILLS
+
+Bench work:
+
+Western blot, PCR, cell culture, bacteria culture, gene clone, etc.
+
+Animal experiments:
+
+Behaviour study:
+
+Zebra Finches, playbacked different songs using custom-written Matlab software to study their behaviour, performed immunocytochemistry
+
+Electropharyngeogram study:
+
+C. elegans: did electropharyngeogram (EPG) study on avr-15 mutant
+
+Electrophysiological study:
+
+Rodent hippocampal brain slices: did electrophysiological recordings on CA1 to study the role of sleeping in memory consolidation
+
+Optogenetic studies:
+
+Maggots: did optogenetic stimulation on olfactory Or42b neurons in Drosophila larva to study their chemotaxis behaviours
+
+Software:
+
+Graphpad Prizm, Adobe Photoshop, Illustator, Image J, Endnote, Microsoft office (Word, Excel, Powerpoint, Outlook), JMP, R studio
+
+### RESEARCH INTERESTS
+
+Interested in data analysis and the brain
+
+### RESEARCH EXPERIENCE
+
+McGill University [Montreal, Quebec]{style="float:right"}
+
+_Honor student_ [September 2016 - May 2017]{style="float:right"}
+
+Topic: Developmental influences on auditory memory in female Zebra Finches (songbird), investigating behavioural and neural deficits in memory formation
+
+### TEACHING EXPERIENCE
+
+McGill SUS Peer Tutoring [Montreal, Quebec]{style="float:right"}
+
+_Peer Tutor, General Chemistry 1_ [September 2014 - December 2014]{style="float:right"}
+
+
+
+

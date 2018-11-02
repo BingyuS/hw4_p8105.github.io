@@ -11,7 +11,7 @@
 
 
 
-<title>About</title>
+<title>Curriculum Vitae</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -169,6 +172,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -231,19 +329,63 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">About</h1>
+<h1 class="title toc-ignore">Curriculum Vitae</h1>
 
 </div>
 
 
-<div id="about-this-site" class="section level3">
-<h3>About this site</h3>
-<p>Sometimes you need to say a bit about the site – how it was made, where it’s hosted, where the source code can be found.</p>
-<p>If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.</p>
+<div id="bingyu-sun" class="section level2">
+<h2>Bingyu Sun</h2>
+<p>Tel: (01) 929-284-6710</p>
+<p>Email: <a href="mailto:bs3142@cumc.columbia.edu">bs3142@cumc.columbia.edu</a></p>
+<div id="education" class="section level3">
+<h3>EDUCATION</h3>
+<p><strong>Columbia University</strong> <span style="float:right">New York, New York</span></p>
+<p><em>Master, Biostatistics</em> <span style="float:right">September 2018 - Present</span></p>
+<p><strong>McGill University</strong> <span style="float:right">Montreal, Quebec</span></p>
+<p><em>undergraduate, Honor Biology, Neuroscience <strong>GPA: 3.72</strong></em> <span style="float:right">September 2013 - May 2017</span></p>
+</div>
+<div id="languages" class="section level3">
+<h3>LANGUAGES</h3>
+<p>English and Mandarin</p>
+</div>
+<div id="technical-skills" class="section level3">
+<h3>TECHNICAL SKILLS</h3>
+<p>Bench work:</p>
+<p>Western blot, PCR, cell culture, bacteria culture, gene clone, etc.</p>
+<p>Animal experiments:</p>
+<p>Behaviour study:</p>
+<p>Zebra Finches, playbacked different songs using custom-written Matlab software to study their behaviour, performed immunocytochemistry</p>
+<p>Electropharyngeogram study:</p>
+<p>C. elegans: did electropharyngeogram (EPG) study on avr-15 mutant</p>
+<p>Electrophysiological study:</p>
+<p>Rodent hippocampal brain slices: did electrophysiological recordings on CA1 to study the role of sleeping in memory consolidation</p>
+<p>Optogenetic studies:</p>
+<p>Maggots: did optogenetic stimulation on olfactory Or42b neurons in Drosophila larva to study their chemotaxis behaviours</p>
+<p>Software:</p>
+<p>Graphpad Prizm, Adobe Photoshop, Illustator, Image J, Endnote, Microsoft office (Word, Excel, Powerpoint, Outlook), JMP, R studio</p>
+</div>
+<div id="research-interests" class="section level3">
+<h3>RESEARCH INTERESTS</h3>
+<p>Interested in data analysis and the brain</p>
+</div>
+<div id="research-experience" class="section level3">
+<h3>RESEARCH EXPERIENCE</h3>
+<p>McGill University <span style="float:right">Montreal, Quebec</span></p>
+<p><em>Honor student</em> <span style="float:right">September 2016 - May 2017</span></p>
+<p>Topic: Developmental influences on auditory memory in female Zebra Finches (songbird), investigating behavioural and neural deficits in memory formation</p>
+</div>
+<div id="teaching-experience" class="section level3">
+<h3>TEACHING EXPERIENCE</h3>
+<p>McGill SUS Peer Tutoring <span style="float:right">Montreal, Quebec</span></p>
+<p><em>Peer Tutor, General Chemistry 1</em> <span style="float:right">September 2014 - December 2014</span></p>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
