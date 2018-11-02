@@ -11,7 +11,7 @@ Biostatisitcs Department in Mailman School of Public Health, Columbia University
 
 ### About this website
 
-The website contains my [academic experience](cv.html) and three plotly plots shown on flexdashboard.
+The website contains my [academic experience](cv.html) and [three plotly plots](dashboard.html) shown on flexdashboard.
 
 ### About myself
 
