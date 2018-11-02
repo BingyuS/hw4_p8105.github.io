@@ -9,8 +9,6 @@ navbar:
       menu:
       - text: Code
         href: code.html
-      - text: Plotly
-        href: plotly.html
       - text: Dashboard
         href: dashboard.html
     - text: "About"
