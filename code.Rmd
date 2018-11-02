@@ -43,11 +43,10 @@ tidy_noaa %>%
 
 ```{r}
 tidy_noaa %>%
-  filter(!is.na(tmax) & !is.na(tmin),
-         month %in% c("01", "02", "03", "04", "05", "06")) %>%
+  filter(!is.na(tmax) & !is.na(tmin)) %>%
   plot_ly(x = ~ tmin, y = ~ tmax, type = "scatter", mode = "markers",
           alpha = 0.5,
-          color = ~ month) %>%
+          color = ~ month, colors = "Set3") %>%
   layout(xaxis = list(title = "Minimum temperature (ºC)"),
          yaxis = list(title = "Maximum temperature (ºC)")) #plot scatterplot showing tmax vs. tmin
 ```
